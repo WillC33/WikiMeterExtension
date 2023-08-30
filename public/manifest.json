@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "WikiMeter: Measuring Your Wikipedia Odyssey",
+  "version": "1.0",
+  "description": "Tracks and calculates the percentage of Wikipedia articles visited.",
+  "permissions": [
+    "storage",
+    "history"
+  ],
+  "host_permissions": [
+    "*://wikimeterapi.azurewebsites.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "512": "icon512.png"
+    }
+  },
+  "icons": {
+    "512": "icon512.png"
+  }
+}
+
