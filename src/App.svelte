@@ -1,4 +1,6 @@
 <script>
+    import Loader from './Loader.svelte';
+
     let visitedArticlesCount = null;
     let wikipediaArticleCount = null;
     let percentage = null;
@@ -97,11 +99,11 @@
     {#if visitedArticlesCount !== null && wikipediaArticleCount !== null}
         {#if wikipediaArticleCount > 0}
             <p class="content">You've visited {visitedArticlesCount} out of {wikipediaArticleCount} Wikipedia articles.</p>
-            <p class="content">This is approximately {percentage.toFixed(10)}% of all articles.</p>
+            <p class="content">This is approximately {percentage.toFixed(6)}% of all articles.</p>
         {:else}
             <p class="content">No Wikipedia article count available.</p>
         {/if}
     {:else}
-        <p class="content">Loading...</p>
+        <Loader />
     {/if}
 </div>
